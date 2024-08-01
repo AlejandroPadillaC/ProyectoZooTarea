@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.concurrent.CountDownLatch;
+import zoologico.*;
 
 
 public class FirebaseSaveObject {
@@ -21,14 +22,15 @@ public class FirebaseSaveObject {
     
     public static void main(String[] args) throws FileNotFoundException {
         
+        Animales animal1 = new Animales("","","","","","");
         Item item = new Item();
         item.setId(10L);
-        item.setNombre("PuercoArana");
+        item.setNombre("Arana");
         item.setedad(15);
         
         Item item2 = new Item();
         item2.setId(100L);
-        item2.setNombre("PuercoElefante");
+        item2.setNombre("Elefante");
         item2.setedad(10);
  
         // save item objec to firebase.
