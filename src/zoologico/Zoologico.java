@@ -6,20 +6,18 @@
  */
 package zoologico;
 
+
 import Views.*;
-/**
- *
- * @author Lenovo
- */
+import java.io.FileNotFoundException;
+
 public class Zoologico {
     
     public static Tabla tablaGlobal = new Tabla();
-  
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws FileNotFoundException {
         
         LogIn Ingreso = new LogIn();
         Ingreso.setVisible(true);
         Ingreso.setLocationRelativeTo(null);
-        
-    }
+    }  
 }

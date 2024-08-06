@@ -4,6 +4,7 @@
  */
 package Views;
 
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import zoologico.*;
 
@@ -16,6 +17,10 @@ public class Tabla extends javax.swing.JFrame {
     public void agregarElemento(Animales animal) {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.addRow(new Object[]{animal.getNombre(), animal.getTipAnimal(), animal.getEdad(), animal.getPeso(), animal.getAlimento(), animal.getJaula()});
+    }
+
+    public JTable getjTable1() {
+        return jTable1;
     }
 
     /**
@@ -101,6 +106,10 @@ public class Tabla extends javax.swing.JFrame {
      * @param args the command line arguments
      */
 
+    /**
+     * @param args the command line arguments
+     */
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButSalir;

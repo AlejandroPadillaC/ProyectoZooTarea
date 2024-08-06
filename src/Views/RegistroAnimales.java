@@ -7,6 +7,13 @@ package Views;
 import javax.swing.JOptionPane;
 import zoologico.Animales;
 import zoologico.Zoologico;
+import ModelView.FirebaseSaveObject;
+import com.google.firebase.auth.internal.FirebaseCustomAuthToken;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JTable;
+import static zoologico.Zoologico.tablaGlobal;
 
 /**
  *
@@ -15,6 +22,10 @@ import zoologico.Zoologico;
 public class RegistroAnimales extends javax.swing.JFrame {
 
     final Tabla tablaFrame;
+    
+    Tabla frame = new Tabla();
+    JTable tabla = frame.getjTable1();
+    
     
     public RegistroAnimales() {
         initComponents();
@@ -192,8 +203,16 @@ public class RegistroAnimales extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void ButCompletarRegisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButCompletarRegisActionPerformed
-        Zoologico.tablaGlobal.agregarElemento(registeranimal()); 
+        
+        //Zoologico.tablaGlobal.agregarElemento(registeranimal()); 
+        try {
+            FirebaseSaveObject.conexionglobal.saveFree(registeranimal(),registeranimal().getNombre());
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(RegistroAnimales.class.getName()).log(Level.SEVERE, null, ex);
+        }
         JOptionPane.showMessageDialog(this, "Se registro el animal correctamente");
+        
+        FirebaseSaveObject.conexionglobal.showDataInJTable(tabla);
     }//GEN-LAST:event_ButCompletarRegisActionPerformed
 
     /**
