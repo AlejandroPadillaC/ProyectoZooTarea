@@ -72,6 +72,10 @@ public class FirebaseSaveObject {
     public void saveFree(Animales animal,String nombre)throws FileNotFoundException{
         save(animal, nombre);
     }
+    
+    public void deleteFree(Animales animal, String nombre) throws FileNotFoundException{
+        delete(animal, nombre);
+    }
     private void save(Animales animal,String nombre) throws FileNotFoundException {
         if (animal != null) {
             

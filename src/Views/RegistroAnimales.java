@@ -21,18 +21,13 @@ import static zoologico.Zoologico.tablaGlobal;
  */
 public class RegistroAnimales extends javax.swing.JFrame {
 
-    final Tabla tablaFrame;
-    
     Tabla frame = new Tabla();
     JTable tabla = frame.getjTable1();
     
-    
     public RegistroAnimales() {
-        initComponents();
-        tablaFrame = new Tabla(); 
+        initComponents(); 
     }
     
-
     public Animales registeranimal(){
         Animales animalx = new Animales(NomAnimaltxtField.getText(),TipoAnimalTxtField.getText(),EdadTxtField.getText(),PesoTxtField.getText(),AlimentotxtField.getText(),JaulaTxtField.getText());
         return animalx;
@@ -113,6 +108,7 @@ public class RegistroAnimales extends javax.swing.JFrame {
             .addGroup(PanelRegisLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(PanelRegisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ButCompletarRegis)
                     .addGroup(PanelRegisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(txt3Res)
                         .addComponent(txt6Res)
@@ -125,8 +121,7 @@ public class RegistroAnimales extends javax.swing.JFrame {
                         .addComponent(NomAnimaltxtField)
                         .addComponent(PesoTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(TipoAnimalTxtField)
-                        .addComponent(JaulaTxtField, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))
-                    .addComponent(ButCompletarRegis))
+                        .addComponent(JaulaTxtField, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)))
                 .addContainerGap(175, Short.MAX_VALUE))
         );
         PanelRegisLayout.setVerticalGroup(
@@ -144,7 +139,7 @@ public class RegistroAnimales extends javax.swing.JFrame {
                 .addComponent(txt3Res)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(EdadTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(txt4Res)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PesoTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -156,7 +151,7 @@ public class RegistroAnimales extends javax.swing.JFrame {
                 .addComponent(txt6Res)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(JaulaTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(ButCompletarRegis, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
@@ -203,8 +198,6 @@ public class RegistroAnimales extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void ButCompletarRegisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButCompletarRegisActionPerformed
-        
-        //Zoologico.tablaGlobal.agregarElemento(registeranimal()); 
         try {
             FirebaseSaveObject.conexionglobal.saveFree(registeranimal(),registeranimal().getNombre());
         } catch (FileNotFoundException ex) {

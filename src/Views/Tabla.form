@@ -44,9 +44,31 @@
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="ButSalir" min="-2" max="-2" attributes="0"/>
-                      <Component id="Tabla" min="-2" pref="758" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="Tabla" min="-2" pref="537" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="TxtName1" max="32767" attributes="0"/>
+                                      <Component id="TxtTipAnimal" max="32767" attributes="0"/>
+                                      <Component id="TxtEdad" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TxtPeso" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TxtAlimento" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TxtJaula" alignment="0" pref="173" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="ButModi" pref="118" max="32767" attributes="0"/>
+                                      <Component id="ButElimi" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
-                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                  <EmptySpace pref="35" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -54,7 +76,26 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="Tabla" min="-2" pref="403" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Tabla" min="-2" pref="403" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="TxtName1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="TxtTipAnimal" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="TxtEdad" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="TxtPeso" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="TxtAlimento" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="TxtJaula" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="ButModi" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="ButElimi" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="ButSalir" min="-2" pref="38" max="-2" attributes="0"/>
                   <EmptySpace pref="15" max="32767" attributes="0"/>
@@ -135,6 +176,34 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButSalirActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="TxtName1">
+        </Component>
+        <Component class="javax.swing.JTextField" name="TxtTipAnimal">
+        </Component>
+        <Component class="javax.swing.JTextField" name="TxtEdad">
+        </Component>
+        <Component class="javax.swing.JTextField" name="TxtPeso">
+        </Component>
+        <Component class="javax.swing.JTextField" name="TxtAlimento">
+        </Component>
+        <Component class="javax.swing.JTextField" name="TxtJaula">
+        </Component>
+        <Component class="javax.swing.JButton" name="ButModi">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Modificar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButModiActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="ButElimi">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Eliminar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButElimiActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

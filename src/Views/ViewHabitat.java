@@ -6,6 +6,7 @@ package Views;
 
 import ModelView.FirebaseSaveObject;
 import zoologico.Zoologico;
+import static zoologico.Zoologico.tablaGlobal;
 
 /**
  *
@@ -15,12 +16,10 @@ public class ViewHabitat extends javax.swing.JFrame {
 
     private RegistroAnimales registroAnimales;
 
-    public void mostrarTabla(Tabla tabla) {
-        tabla.setVisible(true);
-    }
     
     public ViewHabitat() {
         initComponents();
+        FirebaseSaveObject.conexionglobal.showDataInJTable(Zoologico.tablaGlobal.getjTable1());
     }
 
     @SuppressWarnings("unchecked")
@@ -181,7 +180,7 @@ public class ViewHabitat extends javax.swing.JFrame {
     }//GEN-LAST:event_RegistroOptionActionPerformed
 
     private void TablaMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TablaMenuItemActionPerformed
-        FirebaseSaveObject.conexionglobal.showDataInJTable(Zoologico.tablaGlobal.getjTable1());
+        tablaGlobal.initTableSelectionModel();
         Zoologico.tablaGlobal.setVisible(true);
         Zoologico.tablaGlobal.setLocationRelativeTo(null);
         dispose();

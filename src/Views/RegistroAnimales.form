@@ -57,7 +57,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="ButCompletarRegis" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                               <Component id="txt3Res" min="-2" max="-2" attributes="0"/>
                               <Component id="txt6Res" min="-2" max="-2" attributes="0"/>
                               <Component id="txt5Res" min="-2" max="-2" attributes="0"/>
@@ -71,7 +72,6 @@
                               <Component id="TipoAnimalTxtField" alignment="0" max="32767" attributes="0"/>
                               <Component id="JaulaTxtField" pref="210" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="ButCompletarRegis" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="175" max="32767" attributes="0"/>
                   </Group>
@@ -92,7 +92,7 @@
                       <Component id="txt3Res" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="EdadTxtField" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Component id="txt4Res" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="PesoTxtField" min="-2" max="-2" attributes="0"/>
@@ -104,7 +104,7 @@
                       <Component id="txt6Res" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="JaulaTxtField" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <EmptySpace pref="18" max="32767" attributes="0"/>
                       <Component id="ButCompletarRegis" min="-2" pref="36" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>

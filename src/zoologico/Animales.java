@@ -18,6 +18,7 @@ public class Animales{
         this.alimento = alimento;
         this.jaula = jaula;
     }
+    
     public Animales() {}
 
     public String getNombre() {
